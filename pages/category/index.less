@@ -1,0 +1,57 @@
+/* pages/category/index.wxss */
+page{
+    height: 100%;
+}
+.cates{
+    height: 100%;
+  .cates_container{
+    //   在less中使用calc注意的问题编译有问题
+      height:calc(100vh - 90rpx);
+      display: flex;
+      // 左边菜单
+    .left_menu{
+        // 子项的高度是100%
+        flex:2;
+        .menu_item{
+          height: 80rpx;
+          display:flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 30rpx;
+          
+        }
+        .active{
+          color:var(--themeColor);
+          border-left:5rpx solid currentColor;
+        }
+    }
+     // 右边菜单
+    .right_content{
+        // 子项的高度是100%
+        flex:5;
+        .good_group{
+          .good_title{
+            height: 80rpx;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            .delimiter{
+              color:#ccc;
+              padding: 0 10rpx;
+            }
+          }
+          .good_list{
+            display: flex;
+            flex-wrap: wrap;
+            navigator{
+              width:33.3%;
+              text-align: center;
+              image{
+                width:50%;
+              }
+            }
+          }
+        }
+    }
+  }  
+}
