@@ -6,7 +6,8 @@
         <view class="first_tab">
             <navigator class="good_item"
             wx:for="{{goodList}}"
-            wx:key="goods_id"> 
+            wx:key="goods_id"
+            url="/pages/goods_detail/index?good_id={{item.goods_id}}"> 
                 <view class="good_img_wrap">
                     <image mode="widthFix" src="{{item.goods_small_logo?item.goods_small_logo:'http://image4.suning.cn/uimg/b2c/newcatentries/0000000000-000000000174647582_1_400x400.jpg'}}" />
                 </view>

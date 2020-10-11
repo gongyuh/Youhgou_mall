@@ -50,6 +50,9 @@ Page({
     this.setData({
       goodList:res.goods
     })
+
+    // 关闭下拉刷新的窗口 如果没有调用下拉刷新的窗口 直接关闭也不会报错  
+    wx.stopPullDownRefresh();
   },
 
   /* 标题点击事件 从子组件传递过来的 */
@@ -64,5 +67,21 @@ Page({
     this.setData({
       tabs
     })
-  }
+  },
+
+  onReachBottom(){
+    console.log('出发了')
+  },
+
+    // 下拉刷新事件 
+    onPullDownRefresh(){
+      // 1 重置数组
+      this.setData({
+        goodsList:[]
+      })
+      // 2 重置页码
+      this.QueryParams.pagenum=1;
+      // 3 发送请求
+      this.getGoodsList();
+    }
 })
