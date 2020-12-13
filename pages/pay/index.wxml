@@ -1,6 +1,6 @@
 <!-- 收货地址 -->
 <view class="revice_address_row">
-    <view   class="user_info_row" >
+    <view class="user_info_row" >
       <view class="user_info">
         <view>{{address.userName}}</view>
         <view>{{address.all}}</view>
@@ -44,7 +44,7 @@
       </view>
       <view>包含运费</view>
     </view>
-    <view class="order_pay_wrap" bindtap="handleOrderPay"  >
+    <view class="order_pay_wrap" bindtap="handleOrderPay">
       支付({{totalNum}})
     </view>
   </view>
